@@ -7,3 +7,16 @@ before_install:
 
 script:
   - docker run yohames/deact npm run coverage
+
+deploy:
+  provider: elasticbeanstalk
+  region: "eu-north-1"
+  app: "deact"
+  env: "Deact-env"
+  bucket_name: "elasticbeanstalk-eu-north-1-750545041358"
+  bucket_path: "deact"
+  on:
+    branch: main
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: 
+    secure: "$AWS_SECRET_KEY"
