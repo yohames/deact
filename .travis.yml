@@ -11,11 +11,11 @@ script:
 deploy:
   provider: elasticbeanstalk
   region: "eu-north-1"
-  app: "deact"
-  env: "Deact-env"
+  app: "docker-react"
+  env: "Docker-react-env"
   bucket_name: "elasticbeanstalk-eu-north-1-750545041358"
-  bucket_path: "deact"
+  bucket_path: "docker-react"
   on:
     branch: main
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: $AWS_SECRET_KEY
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
