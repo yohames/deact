@@ -28,7 +28,37 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <div style={{ marginTop: '2rem', textAlign: 'center' }}>
+        <ExpandingButton />
+      </div>
     </>
+  )
+}
+
+function ExpandingButton() {
+  const [size, setSize] = useState(100)
+
+  const handleClick = () => {
+    setSize((prev) => prev + 20)
+  }
+
+  return (
+    <button
+      onClick={handleClick}
+      style={{
+        width: `${size}px`,
+        height: `${size / 2}px`,
+        background: 'linear-gradient(90deg, #4e54c8, #8f94fb)',
+        color: '#fff',
+        border: 'none',
+        borderRadius: '30px',
+        fontSize: `${size / 10}px`,
+        transition: 'all 0.3s cubic-bezier(.25,.8,.25,1)',
+        boxShadow: '0 4px 14px 0 rgba(74,58,255,0.25)'
+      }}
+    >
+      Click me! {size}px
+    </button>
   )
 }
 
