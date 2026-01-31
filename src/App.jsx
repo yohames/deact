@@ -36,11 +36,11 @@ function App() {
 }
 
 function ExpandingButton() {
-  const [size, setSize] = useState(100);
+  const [size, setSize] = useState(100)
 
   const handleClick = () => {
-    setSize((prev) => prev + 20);
-  };
+    setSize((prev) => prev + 20)
+  }
 
   return (
     <button
@@ -59,7 +59,7 @@ function ExpandingButton() {
     >
       Click me! {size}px
     </button>
-  );
+  )
 }
 
 export default App
