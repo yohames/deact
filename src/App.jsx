@@ -59,7 +59,7 @@ function ExpandingButton() {
     >
       Click me! {size}px
     </button>
-  );
+  )
 }
 
 export default App
